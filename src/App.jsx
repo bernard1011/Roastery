@@ -1,23 +1,17 @@
-import { useState } from "react";
-
-import Header from "./components/Header.jsx"
-// import Card from "./components/Card.jsx"
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.jsx"
+import Espresso from "./pages/Espresso.jsx";
 
 
 
 
 const App = () => {
   return (
-    <>
-      
-        <header>
-          <Header />
-        </header>
-        <main className="flex justify-center">
-          {/* <Card /> */}
-        </main>
-      
-    </>
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/espresso" element={<Espresso />}/>
+    </Routes>
+    
   );
 };
 

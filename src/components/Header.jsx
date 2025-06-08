@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 library.add(faBars, faXmark);
 
-const Btn = ({name}) => (
-  <button className="text-3xl pt-3 pb-4 w-56 text-amber-50 bg-gray-700/20 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg border border-gray-500">
+const Btn = ({name, link}) => (
+  <Link to={`${link}`} className="text-3xl text-center pt-3 pb-4 w-56 text-amber-50 bg-gray-700/20 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg border border-gray-500">
     {name}
-  </button>
+  </Link>
 );
 
 const Navbar = () => {
@@ -77,7 +78,7 @@ const Hero = () => {
       <p className="text-gray-100 text-3xl mt-11">Смакуй.</p>
 
       <div className="flex flex-col gap-5 mt-16 items-center">
-        <Btn name="Еспресо" />
+        <Btn name="Еспресо" link="/espresso"/>
         <Btn name="Фільтр" />
         <Btn name="Дріп" />
       </div>
