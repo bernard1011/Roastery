@@ -89,7 +89,7 @@ const Hero = () => {
 const Header = () => {
   return (
     <>
-      <div className="bg-[url(/background.webp)] bg-size-[400%] pt-4 h-[850px]">
+      <div className="bg-[url(/background.webp)] bg-size-[400%] pt-4 h-screen">
         <Navbar />
         <Hero />
       </div>
